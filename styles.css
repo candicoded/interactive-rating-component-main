@@ -1,0 +1,160 @@
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --Medium-grey: hsl(216, 12%, 54%);
+  --Dark-blue: hsl(213, 19%, 18%);
+  --Very-dark-blue: hsl(216, 12%, 8%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--Very-dark-blue);
+  color: var(--white);
+}
+
+main {
+  background-color: var(--Dark-blue);
+  border-radius: 15px;
+  width: 85%;
+  padding: 1.5em;
+}
+
+.star {
+  background-color: rgba(61, 61, 70, 0.463);
+  padding: 0.8em;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-bottom: 1em;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 15px;
+  color: var(--light-grey);
+  margin: 1em 0;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5em 0;
+}
+
+.number {
+  background-color: rgba(61, 61, 70, 0.463);
+  padding: 1em;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: var(--light-grey);
+}
+
+.submit {
+  width: 100%;
+  background-color: var(--orange);
+  border: none;
+  border-radius: 30px;
+  padding: 1.2em 1em;
+  color: var(--white);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 1em;
+}
+
+section {
+  background-color: var(--Dark-blue);
+  border-radius: 15px;
+  width: 85%;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section p {
+  text-align: center;
+}
+
+.selected {
+  color: var(--orange);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.5em 1em;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin: 2em 0;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 12px;
+  color: var(--white);
+}
+
+footer a {
+  color: var(--orange);
+}
+
+@media only screen and (min-width: 600px) {
+  main,
+  section {
+    max-width: 400px;
+    border-radius: 30px;
+  }
+
+  .star {
+    margin-bottom: 1.5em;
+  }
+
+  .submit {
+    padding: 1em 1em;
+    cursor: pointer;
+    margin: 0.5em 0;
+  }
+
+  .submit:hover {
+    color: var(--orange);
+    background-color: var(--white);
+  }
+
+  .number {
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+  }
+
+  .number:hover {
+    background-color: var(--Medium-grey);
+    color: var(--white);
+    cursor: pointer;
+  }
+}
